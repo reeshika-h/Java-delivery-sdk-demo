@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link th:href="@{/main.css}" rel="stylesheet" />
+    <title>Blogs</title>
+</head>
+<body>
+<h1 style="text-align:center">BLOGS!</h1>
+<div class="author-cards">
+    <div th:each="author, i : ${titles}" class="author-card">
+        <img th:src="${authorImg[__${i.index}__]}" style="max-width:200px; max-height:200px"/>
+        <span th:text="${author}"></span>
+        <p th:text="${author}"></p>
+    </div>
+</div>
+</body>
+</html>
